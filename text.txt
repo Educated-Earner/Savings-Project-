@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan To Succeed - Susu DApp</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: url('https://images4.alphacoders.com/133/1338472.png') no-repeat center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      color: gold;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      margin: 20px auto;
+      max-width: 90%;
+      display: none; /* Make all sections hidden by default */
+      text-align: left;
+    }
+    .button-container {
+      margin: 20px 0;
+    }
+    button {
+      background: #008CBA;
+      color: gold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #006F8E;
+    }
+    table {
+      width: 100%;
+      margin: 10px 0;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #000;
+      color: gold;
+    }
+    td.payout {
+      color: green;
+    }
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px;
+      width: 80%;
+    }
+    .crypto-info {
+      margin-top: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Plan To Succeed</h1>
+
+  <!-- Buttons to toggle sections -->
+  <div class="button-container">
+    <button onclick="showSection('how-it-works')">How It Works</button>
+    <button onclick="showSection('contribution-schedule')">Contribution Schedule</button>
+    <button onclick="showSection('payout-info')">Payout Info</button>
+    <button onclick="showSection('penalties')">Penalties</button>
+    <button onclick="showSection('community')">Community</button> <!-- New Community button -->
+    <button onclick="showSection('join-now')">Join Now</button> <!-- New Join Now button -->
+  </div>
+
+  <!-- How It Works Section -->
+  <div id="how-it-works" class="content-box">
+    <h2>How It Works</h2>
+    <p>
+      The **Plan To Succeed** is a community-based saving and payout model, known as a **Susu**, where participants contribute a fixed amount every week to the group pool. Each week, the funds contributed by the group are sent directly to the contributor who is next in line to receive their payout.
+    </p>
+    <p>
+      <strong>Key Points:</strong>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>1. Weekly Contributions:</strong> Every participant deposits $100 weekly into the system. This deposit is made directly to the next person in the payout queue via a peer-to-peer transaction.</li>
+        <li><strong>2. Fee Deduction:</strong> A small **$50 fee** is evenly divided among all contributors, excluding the one receiving the payout. For example, if there are 10 contributors, the fee is divided by 9, meaning each contributor (except the one receiving the payout) pays approximately **$5.56** as part of the fee. The total deduction will always be $50, so the final payout remains **$1550**. The fee is deducted during the deposit process, ensuring that only **$94.44** goes to the payout contributor.</li>
+        <li><strong>3. Privacy:</strong> All transactions are handled discreetly, with contributors’ payment details (e.g., wallet address or payment platform) kept private. Each participant only interacts with the system to confirm their deposits and receive payouts when it’s their turn.</li>
+        <li><strong>4. Cycle Duration:</strong> The system operates on an **8 to 16-week cycle** depending on the number of participants, with each contributor receiving their payout in the order they joined the pool.</li>
+      </ul>
+    </p>
+    <p>
+      By participating, you help others in the community while being rewarded with your own payout when it's your turn. It’s a great way to save, help others, and make meaningful connections within the community.
+    </p>
+  </div>
+
+  <!-- Contribution Schedule Section -->
+  <div id="contribution-schedule" class="content-box">
+    <h2>Contribution Schedule</h2>
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Contributor</th><th>Amount (USD)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Contributor 1</td><td>$100</td></tr>
+        <tr><td>2</td><td>Contributor 2</td><td>$100</td></tr>
+        <tr><td>3</td><td>Contributor 3</td><td>$100</td></tr>
+        <tr><td>4</td><td>Contributor 4</td><td>$100</td></tr>
+        <tr><td>5</td><td>Contributor 5</td><td>$100</td></tr>
+        <tr><td>6</td><td>Contributor 6</td><td>$100</td></tr>
+        <tr><td>7</td><td>Contributor 7</td><td>$100</td></tr>
+        <tr><td>8</td><td>Contributor 8</td><td>$100</td></tr>
+        <tr><td>9</td><td>Contributor 9</td><td>$100</td></tr>
+        <tr><td>10</td><td>Contributor 10</td><td>$100</td></tr>
+        <tr><td>11</td><td>Contributor 11</td><td>$100</td></tr>
+        <tr><td>12</td><td>Contributor 12</td><td>$100</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payout Info Section -->
+  <div id="payout-info" class="content-box">
+    <h2>Payout Info</h2>
+    <p>The total payout for each cycle will always remain $1550. This amount is paid to the contributor at the top of the payout queue, and each participant contributes $100 to the pool weekly. Fees are deducted from each contributor's deposit.</p>
+
+    <!-- Chart to represent the fee structure -->
+    <canvas id="payoutChart" width="400" height="200"></canvas>
+    <script>
+      var ctx = document.getElementById('payoutChart').getContext('2d');
+      var payoutChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Total Payout', 'Fee Deduction'],
+          datasets: [{
+            label: 'Amount in USD',
+            data: [1550, 50],
+            backgroundColor: ['green', 'red'],
+            borderColor: ['green', 'red'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+  </div>
+
+  <!-- Penalties Section -->
+  <div id="penalties" class="content-box">
+    <h2>Penalties</h2>
+    <p>
+      Late payments will be penalized as follows:
+    </p>
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li><strong>1. Grace Period:</strong> Participants will have a 24-hour grace period after the due date to make their deposit. If the deposit is not made within the grace period, a small penalty will be applied.</li>
+      <li><strong>2. After 3 Late Payments:</strong> A participant will be temporarily blocked from joining the queue for one cycle. This ensures timely participation and fairness to other members.</li>
+      <li><strong>3. Penalty Amount:</strong> A fee of $10 will be deducted from the next contribution for late payments (charged only after the grace period ends).</li>
+    </ul>
+  </div>
+
+  <!-- Community Section -->
+  <div id="community" class="content-box">
+    <h2>Community</h2>
+    <p>Join our growing community of contributors who help each other succeed. By participating, you can make a difference while earning rewards!</p>
+  </div>
+
+  <!-- Join Now Section -->
+  <div id="join-now" class="content-box">
+    <h2>Join Now</h2>
+    <p>If you are ready to participate, please submit your details below:</p>
+    <input type="text" id="username" placeholder="Enter Your Username" />
+    <button onclick="joinNow()">Submit</button>
+  </div>
+
+  <script>
+    // Function to toggle visibility of sections
+    function showSection(sectionId) {
+      // Hide all sections
+      var sections = document.querySelectorAll('.content-box');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      // Show the selected section
+      var selectedSection = document.getElementById(sectionId);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+      }
+    }
+    
+    // Default to show "How It Works" on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      showSection('how-it-works');
+    });
+  </script>
+
+</body>
+</html>
